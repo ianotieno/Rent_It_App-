@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
-import 'package:rentalapp_flutter/Screen/HomePage.dart';
+import 'package:rentit/Screen/HomePage.dart';
 
 class DashBoardPage extends StatelessWidget {
   const DashBoardPage({Key? key}) : super(key: key);
@@ -21,8 +21,6 @@ class DashBoardPage extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         colorBehindNavBar: Colors.white,
       ),
-      
-      
       onItemSelected: (index) {
         // Optional: Handle tab reselection to pop to root if needed
         if (PersistentTabController().index == index) {

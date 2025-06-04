@@ -1,6 +1,6 @@
 {
-    "name": "rentalapp_flutter",
-    "short_name": "rentalapp_flutter",
+    "name": "rentit",
+    "short_name": "rentit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

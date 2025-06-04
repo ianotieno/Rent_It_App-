@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rentalapp_flutter/Screen/Home.dart';
+import 'package:rentit/Screen/Home.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,15 +15,17 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     // Simulate a delay for splash screen
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed( Duration(seconds: 10), () {
+    Future.delayed(Duration(seconds: 10), () {
       // Navigate to the home screen after the delay
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const DashBoardPage()),
       );
     });
   }
+
   void dispose() {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     super.dispose();
   }
 
@@ -33,12 +35,12 @@ class _SplashScreenState extends State<SplashScreen>
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors:[
-            Colors.blue,
-            Colors.purple,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+            colors: [
+              Colors.blue,
+              Colors.purple,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
         ),
         child: Center(
@@ -57,9 +59,10 @@ class _SplashScreenState extends State<SplashScreen>
               ElevatedButton(
                 onPressed: () {
                   // Navigate to the next screen
-                   Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const DashBoardPage()),
-      );
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                        builder: (context) => const DashBoardPage()),
+                  );
                 },
                 child: const Text('Get Started'),
               ),
