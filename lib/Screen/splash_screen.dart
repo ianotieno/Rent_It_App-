@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rentit/Screen/Home.dart';
+import 'package:rentit/Screen/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(Duration(seconds: 10), () {
       // Navigate to the home screen after the delay
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const DashBoardPage()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
     });
   }
